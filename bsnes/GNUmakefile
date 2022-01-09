@@ -37,7 +37,6 @@ else ifeq ($(platform),macos)
 else ifneq ($(filter $(platform),linux bsd),)
   ifeq ($(binary),application)
     options += -Wl,-export-dynamic
-    options += -lX11 -lXext
   else ifeq ($(binary),library)
     flags += -fPIC
     options += -shared
