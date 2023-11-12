@@ -1053,7 +1053,7 @@ bool retro_load_game(const retro_game_info *game)
 	{
 		const char *system_dir;
 		environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_dir);
-		string bs_full_path = string(system_dir, "/", "snes/BS-X.bin").transform("\\", "/");
+		string bs_full_path = string(system_dir, "/", "BS-X.bin").transform("\\", "/");
 		if (!file::exists(bs_full_path)) {
 			return false;
 		}
